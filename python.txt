@@ -1,0 +1,10 @@
+Python Simulation
+
+Run the simulation.py  file (prefer VScode)
+
+The controls are present in the simulations itself
+
+CONTROLS:
+Drag: Move Passenger
+Up/Down: Change Temp
+Space: COUGH (Infect)

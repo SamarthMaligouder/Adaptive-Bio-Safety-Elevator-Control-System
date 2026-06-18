@@ -1,0 +1,28 @@
+Here are the step-by-step instructions to run your MATLAB scripts and Simulink model:
+
+Step 1: Prepare the MATLAB Environment
+
+Launch MATLAB on your computer.
+
+In the Current Folder browser on the left side of the MATLAB interface, navigate to the exact directory where you have saved all these uploaded files.
+
+Note: You only need the primary files (.m and .slx). The .slx.autosave, .slx.original, and .slxc files are automatically generated backups and cache files, which you can safely ignore.
+
+Step 2: Load the System Parameters and Test Signals
+Before running the Simulink model, you must load the variables and test signals it depends on into the MATLAB Base Workspace.
+
+Open init_elevator_params.m and click the green Run button in the editor tab (or simply type init_elevator_params in the Command Window and press Enter). This will load all your sensor thresholds, logic weights, and safety specs.
+
+Next, open patent_master_setup.m and click Run (or type patent_master_setup in the Command Window). This script generates the simulated time-series data for your sensor inputs (Radar, Thermal Camera, Cough Sensor, and Touch Tracking).
+
+Look at your Workspace panel (usually on the right). You should now see all the variables (like Temp_Signal, Radar_Signal, W_t, Ts, etc.) successfully loaded.
+
+Step 3: Open and Execute the Simulink Model
+
+In the Current Folder browser, double-click state_machine.slx to open the model in Simulink.
+
+Because you have already populated the Workspace in Step 2, the Inport blocks in your Simulink model will be able to read the necessary signals and parameters.
+
+In the Simulink toolstrip, go to the Simulation tab and click the green Run button.
+
+Once the compilation and simulation are complete, you can double-click on any Scope blocks, Display blocks, or use the Simulation Data Inspector to observe the state machine's output and verify your logic against the generated test scenarios.
